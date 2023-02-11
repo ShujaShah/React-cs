@@ -10,6 +10,7 @@ import Button from "./components/button";
 import ModeToggler from "./components/ModeToggler";
 import NumberGuesser from "./components/NumberGuesser";
 import RegisterForm from "./components/RegisterForm";
+import StateHandling from "./components/StateHandling";
 
 function App() {
   // return (
@@ -42,6 +43,7 @@ function App() {
   return (
     <div>
       <RegisterForm />;
+      <StateHandling />
     </div>
   );
 }
