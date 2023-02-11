@@ -5,6 +5,9 @@ import Navbar from "./components/Navbar";
 import Intro1 from "./components/Intro1";
 import Intro2 from "./components/Intro2";
 import Intro3 from "./components/Intro3";
+import Button from "./components/button";
+import ModeToggler from "./components/ModeToggler";
+import NumberGuesser from "./components/NumberGuesser";
 
 function App() {
   return (
@@ -12,16 +15,25 @@ function App() {
       <div class="header">
         <Navbar />
       </div>
-      <div class="header">
-        <Intro1 name="shuja"/>
+      <div className="header">
+        <Intro1 name="shuja" />
       </div>
-      <div class="header">
-        <Intro2  course="Web Development"/>
+      <div className="header">
+        <Intro2 course="Web Development" />
       </div>
-      <div class="header">
-        <Intro3 app = "React App"/>
+      <div className="header">
+        <Intro3 app="React App" />
       </div>
-      <div class="footer">
+      <div className="header">
+        <Button />
+      </div>
+      <div className="header">
+        <ModeToggler />
+      </div>
+      <div className="header">
+        <NumberGuesser />
+      </div>
+      <div className="footer">
         <Footer />
       </div>
     </div>
