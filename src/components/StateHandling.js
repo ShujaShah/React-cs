@@ -4,7 +4,9 @@ function StateHandling() {
   const [word, setWord] = React.useState("Eat ");
 
   function clickHandler() {
-    setWord("Drink ");
+    if (word == "Eat ") {
+      setWord("Drink ");
+    } else setWord("Eat ");
   }
 
   return (
