@@ -28,6 +28,22 @@
   color: #61dafb;
 }
 
+* {
+  font-family: sans-serif;
+}
+nav {
+  background: #ee9972;
+  padding: 20px;
+  margin-bottom: 3rem;
+}
+nav a {
+  color: #edefee;
+  text-decoration: none;
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

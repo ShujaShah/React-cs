@@ -1,49 +1,29 @@
-import { useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
-import Intro1 from "./components/Intro1";
-import Intro2 from "./components/Intro2";
-import Intro3 from "./components/Intro3";
-import Button from "./components/button";
-import ModeToggler from "./components/ModeToggler";
-import NumberGuesser from "./components/NumberGuesser";
 import RegisterForm from "./components/RegisterForm";
-import StateHandling from "./components/StateHandling";
+import Wallet from "./components/Wallet";
+import { Routes, Route, Link } from "react-router-dom";
+import Home from "./components/Home";
 
 function App() {
-  // return (
-  // <div className="blog-page">
-  //   <div class="header">
-  //     <Navbar />
-  //   </div>
-  //   <div className="header">
-  //     <Intro1 name="shuja" />
-  //   </div>
-  //   <div className="header">
-  //     <Intro2 course="Web Development" />
-  //   </div>
-  //   <div className="header">
-  //     <Intro3 app="React App" />
-  //   </div>
-  //   <div className="header">
-  //     <Button />
-  //   </div>
-  //   <div className="header">
-  //     <ModeToggler />
-  //   </div>
-  //   <div className="header">
-  //     <NumberGuesser />
-  //   </div>
-  //   <div className="footer">
-  //     <Footer />
-  //   </div>
-  // </div>
   return (
-    <div>
-      <RegisterForm />;
-      <StateHandling />
+    <div className="App">
+      <nav className="nav">
+        <Link to="/" className="nav-item">
+          Home
+        </Link>
+        <Link to="/register" className="nav-item">
+          Eat
+        </Link>
+        <Link to="/wallet" className="nav-item">
+          Wallet
+        </Link>
+      </nav>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/register" element={<RegisterForm />} />
+        <Route path="/wallet" element={<Wallet />} />
+      </Routes>
     </div>
   );
 }
