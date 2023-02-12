@@ -11,39 +11,14 @@ import ModeToggler from "./components/ModeToggler";
 import NumberGuesser from "./components/NumberGuesser";
 import RegisterForm from "./components/RegisterForm";
 import StateHandling from "./components/StateHandling";
+import Wallet from "./components/wallet";
 
 function App() {
-  // return (
-  // <div className="blog-page">
-  //   <div class="header">
-  //     <Navbar />
-  //   </div>
-  //   <div className="header">
-  //     <Intro1 name="shuja" />
-  //   </div>
-  //   <div className="header">
-  //     <Intro2 course="Web Development" />
-  //   </div>
-  //   <div className="header">
-  //     <Intro3 app="React App" />
-  //   </div>
-  //   <div className="header">
-  //     <Button />
-  //   </div>
-  //   <div className="header">
-  //     <ModeToggler />
-  //   </div>
-  //   <div className="header">
-  //     <NumberGuesser />
-  //   </div>
-  //   <div className="footer">
-  //     <Footer />
-  //   </div>
-  // </div>
   return (
     <div>
       <RegisterForm />;
       <StateHandling />
+      <Wallet />
     </div>
   );
 }
