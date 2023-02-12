@@ -4,6 +4,8 @@ import RegisterForm from "./components/RegisterForm";
 import Wallet from "./components/Wallet";
 import { Routes, Route, Link } from "react-router-dom";
 import Home from "./components/Home";
+import Assets from "./components/Assets";
+import Calculator from "./components/Calculator";
 
 function App() {
   return (
@@ -18,11 +20,15 @@ function App() {
         <Link to="/wallet" className="nav-item">
           Wallet
         </Link>
+        <Link to="/calculator" className="nav-item">
+          Calculator
+        </Link>
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<RegisterForm />} />
-        <Route path="/wallet" element={<Wallet />} />
+        <Route path="/wallet" element={[<Wallet />, <Assets />] } />
+        <Route path="/calculator" element={<Calculator />} />
       </Routes>
     </div>
   );
