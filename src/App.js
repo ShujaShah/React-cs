@@ -6,6 +6,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import Home from "./components/Home";
 import Assets from "./components/Assets";
 import Calculator from "./components/Calculator";
+import Contact from "./components/Contact";
 
 function App() {
   return (
@@ -23,12 +24,16 @@ function App() {
         <Link to="/calculator" className="nav-item">
           Calculator
         </Link>
+        <Link to="/contact-us" className="nav-item">
+          Contact us
+        </Link>
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<RegisterForm />} />
         <Route path="/wallet" element={[<Wallet />, <Assets />] } />
         <Route path="/calculator" element={<Calculator />} />
+        <Route path="/contact-us" element={<Contact />} />
       </Routes>
     </div>
   );
