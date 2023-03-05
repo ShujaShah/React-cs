@@ -7,6 +7,7 @@ import Home from "./components/Home";
 import Assets from "./components/Assets";
 import Calculator from "./components/Calculator";
 import Contact from "./components/Contact";
+import GetData from "./components/Fetch";
 
 function App() {
   return (
@@ -27,13 +28,17 @@ function App() {
         <Link to="/contact-us" className="nav-item">
           Contact us
         </Link>
+        <Link to="/fetch" className="nav-item">
+          Fetch
+        </Link>
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<RegisterForm />} />
-        <Route path="/wallet" element={[<Wallet />, <Assets />] } />
+        <Route path="/wallet" element={[<Wallet />, <Assets />]} />
         <Route path="/calculator" element={<Calculator />} />
         <Route path="/contact-us" element={<Contact />} />
+        <Route path="/fetch" element={<GetData />} />
       </Routes>
     </div>
   );
