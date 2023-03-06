@@ -8,6 +8,7 @@ import Assets from "./components/Assets";
 import Calculator from "./components/Calculator";
 import Contact from "./components/Contact";
 import GetData from "./components/Fetch";
+import GetUser from "./components/GetUser";
 
 function App() {
   return (
@@ -35,7 +36,7 @@ function App() {
         <Route path="/wallet" element={[<Wallet />, <Assets />]} />
         <Route path="/calculator" element={<Calculator />} />
         <Route path="/contact-us" element={<Contact />} />
-        <Route path="/fetch" element={<GetData />} />
+        <Route path="/fetch" element={[<GetData />, <GetUser />]} />
       </Routes>
     </div>
   );
